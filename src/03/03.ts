@@ -1,5 +1,5 @@
 import { StudentType} from "../02/02"
-import { CityType, GovernmentBuildings } from "../02/02_02";
+import { CityType, GovernmentBuildings, HouseType } from "../02/CityType";
 
 export const addSkill = (student: StudentType, skill: string) => {
   student.technologies.push({
@@ -21,4 +21,16 @@ export function addMoneyToBudget(
 	budget: number
 ) {
   buildings.budget += budget
+}
+
+export function repairHouse(house: HouseType) {
+  house.repaired = true;
+} 
+
+export function toFireStaff(arg0: GovernmentBuildings, arg1: number) {
+  arg0.staffCount -= arg1;
+} 
+
+export function toHireStaff(build: GovernmentBuildings, num: number) {
+  build.staffCount += num;
 }

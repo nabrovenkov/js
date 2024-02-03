@@ -1,4 +1,4 @@
-import { CityType } from "./02_02";
+import { CityType } from "./CityType";
 
 let city: CityType;
 beforeEach(() => {
