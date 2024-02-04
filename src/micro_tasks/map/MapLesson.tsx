@@ -9,16 +9,21 @@ export const MapTest = () => {
 
 			<table>
 				<tr>
-					{topCars.map((car) => {
-						return <td>{car.manufacturer}</td>
+					{topCars.map(car => {
+						return <th>{car.manufacturer}</th>
 					})}
 				</tr>
 				<tr>
-					{topCars.map((car) => {
+					{topCars.map(car => {
 						return <td>{car.model}</td>
 					})}
 				</tr>
+				<tr>
+					{topCars.map((car, index: number) => {
+						return <td>{index + 1}</td>
+					})}
+				</tr>
 			</table>
-	</>
+		</>
 	)
 }
