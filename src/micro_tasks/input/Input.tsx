@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { FullInput } from "./FullInput"
-import { JustInput } from "./JustInput";
 import { JustButton } from "./JustButton";
+import { JustInput } from "./JustInput";
 
 export function Input () {
   
@@ -9,8 +9,12 @@ export function Input () {
     {message: 'message1'},
     {message: 'message2'},
     {message: 'message3'},
-  ])
+  ]);
 
+  let [title, setTitle] = useState('');
+
+  console.log(title)
+  
   function addMessage (title: string) {
     let newMessage = {message: title};
     setMessage([newMessage, ...message]);
@@ -18,9 +22,9 @@ export function Input () {
   
   return (
     <div className={'Input'}>
-      <JustInput />
-      <JustButton />
-      <FullInput addMessage={addMessage}></FullInput>
+      <JustInput title={title} setTitle={setTitle}/>
+      <JustButton name="+" callBack={(title)=>{}}/>
+      
       {message.map((el, index) => {
         return (
           <div key={index}>{el.message}</div>

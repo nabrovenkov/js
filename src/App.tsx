@@ -5,7 +5,7 @@ import { Button } from './micro_tasks/button/Button'
 import { test2 } from './micro_tasks/button/ButtonTest'
 import { UseStateTest } from './micro_tasks/useState/UseStateTest'
 import { FilterTest } from './micro_tasks/filter/FilterTest'
-import { Input } from './micro_tasks/input/Input.1'
+import { Input } from './micro_tasks/input/Input'
 
 function App() {
 	return (
