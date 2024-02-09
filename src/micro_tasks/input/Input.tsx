@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { FullInput } from "./FullInput"
+// import { FullInput } from "./FullInput"
 import { JustButton } from "./JustButton";
 import { JustInput } from "./JustInput";
 
@@ -19,11 +19,16 @@ export function Input () {
     let newMessage = {message: title};
     setMessage([newMessage, ...message]);
   }
+
+  const callBackButtonHandler = () => {
+    addMessage(title);
+    setTitle('')
+  }
   
   return (
     <div className={'Input'}>
       <JustInput title={title} setTitle={setTitle}/>
-      <JustButton name="+" callBack={(title)=>{}}/>
+      <JustButton name="+" callBack={callBackButtonHandler}/>
       
       {message.map((el, index) => {
         return (

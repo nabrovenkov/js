@@ -1,12 +1,12 @@
 type JustButtonType = {
   name: string
-  callBack: (title: string)=>void
+  callBack: ()=>void
 }
 
 
 export function JustButton (props: JustButtonType) {
   function onClickButtonHandler () {
-      props.callBack(title);
+      props.callBack();
       
   }
   return (

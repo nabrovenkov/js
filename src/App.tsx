@@ -14,7 +14,7 @@ function App() {
 			<Button name='Alex' callBack={()=>test2('nabrovenkov')}/>
 			<UseStateTest /> */}
 			{/* <FilterTest /> */}
-			<Input />
+			{/* <Input /> */}
 		</div>
 	)
 }
