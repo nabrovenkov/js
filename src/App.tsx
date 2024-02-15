@@ -1,11 +1,11 @@
 import React from 'react'
-// import './App.css'
-// import { MapTest } from './micro_tasks/map/MapLesson'
-// import { Button } from './micro_tasks/button/Button'
-// import { test2 } from './micro_tasks/button/ButtonTest'
-// import { UseStateTest } from './micro_tasks/useState/UseStateTest'
-// import { FilterTest } from './micro_tasks/filter/FilterTest'
-// import { Input } from './micro_tasks/input/Input'
+import './App.css'
+import { MapTest } from './micro_tasks/map/MapLesson'
+import { Button } from './micro_tasks/button/Button'
+import { test2 } from './micro_tasks/button/ButtonTest'
+import { UseStateTest } from './micro_tasks/useState/UseStateTest'
+import { FilterTest } from './micro_tasks/filter/FilterTest'
+import { Input } from './micro_tasks/input/Input'
 
 function App() {
 	return (
@@ -15,6 +15,7 @@ function App() {
 			<UseStateTest /> */}
 			{/* <FilterTest /> */}
 			{/* <Input /> */}
+			<ReactLearn/>
 		</div>
 	)
 }
