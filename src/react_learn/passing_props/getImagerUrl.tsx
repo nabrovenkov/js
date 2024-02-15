@@ -5,7 +5,15 @@ import { Profile2PropsType } from './Profile2'
 // 	return 'https://i.imgur.com/' + imageId + size + '.jpg'
 // }
 
-export function getImageUrl({ imageId }: Profile2PropsType, size = 's') {
+export function getImageUrl({ imageId }:{imageId: string}, size = 's') {
 	console.log(imageId)
 	return 'https://i.imgur.com/' + imageId + size + '.jpg'
 }
+
+// export function getImageUrl(
+// 	{ imageId }: Pick<Profile2PropsType, 'imageId'>,
+// 	size = 's'
+// ) {
+// 	console.log(imageId)
+// 	return 'https://i.imgur.com/' + imageId + size + '.jpg'
+// }
