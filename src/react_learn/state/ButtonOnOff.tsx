@@ -1,12 +1,12 @@
-import { Fragment, useState } from 'react'
-import styled from 'styled-components'
+import { Fragment, useState } from 'react';
+import styled from 'styled-components';
 
 type ButtonPropsType = {
-	on: boolean
-}
+	on: boolean;
+};
 
 export function ButtonOnOff() {
-	const [on, setOn] = useState(false)
+	const [on, setOn] = useState(false);
 
 	// function handleClick() {
 	//   setOn(!on)
@@ -22,13 +22,13 @@ export function ButtonOnOff() {
 			</Off>
 			<Lamp on={on} />
 		</ButtonsWrapper>
-	)
+	);
 }
 
 const ButtonsWrapper = styled.div`
 	display: flex;
 	justify-content: center;
-`
+`;
 const On = styled.div<ButtonPropsType>`
 	display: inline-block;
 	border: 2px solid black;
@@ -37,7 +37,7 @@ const On = styled.div<ButtonPropsType>`
 	width: 100px;
 	height: 50px;
 	background-color: ${(props) => (props.on ? 'green' : 'white')};
-`
+`;
 const Off = styled.div<ButtonPropsType>`
 	display: inline-block;
 	border: 2px solid black;
@@ -45,7 +45,7 @@ const Off = styled.div<ButtonPropsType>`
 	width: 100px;
 	height: 50px;
 	background-color: ${(props) => (props.on ? 'white' : 'red')};
-`
+`;
 const Lamp = styled.div<ButtonPropsType>`
 	display: inline-block;
 	border: 2px solid black;
@@ -53,4 +53,4 @@ const Lamp = styled.div<ButtonPropsType>`
 	height: 50px;
 	border-radius: 50%;
 	background-color: ${(props) => (props.on ? 'green' : 'red')};
-`
+`;
