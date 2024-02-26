@@ -7,6 +7,8 @@ import { UseStateTest } from './micro_tasks/useState/UseStateTest'
 import { FilterTest } from './micro_tasks/filter/FilterTest'
 import { Input } from './micro_tasks/input/Input'
 import { ReactLearn } from './react_learn/ReactLearn'
+import { KabzdaApp } from './kabzda/Kabzda'
+import { User } from './06_callback/Callback'
 
 function App() {
 	return (
@@ -16,7 +18,9 @@ function App() {
 			<UseStateTest /> */}
 			{/* <FilterTest /> */}
 			{/* <Input /> */}
-			<ReactLearn/>
+			{/* <ReactLearn/> */}
+			<KabzdaApp />
+			{/* <User/> */}
 		</div>
 	)
 }
