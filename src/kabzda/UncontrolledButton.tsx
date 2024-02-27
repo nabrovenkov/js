@@ -1,9 +1,9 @@
 import { Fragment, useState } from 'react';
 import CSS from 'csstype';
 type UncontrolledButtonType = {
-	setOn: (onOff: boolean) => void
+	onChange: (onOff: boolean) => void
 }
-export function UncontrolledButton({setOn}: UncontrolledButtonType) {
+export function UncontrolledButton({onChange}: UncontrolledButtonType) {
 	const wrapperStyle: CSS.Properties = {
 		display: 'flex',
 		justifyContent: 'center',
@@ -15,8 +15,8 @@ export function UncontrolledButton({setOn}: UncontrolledButtonType) {
 	return (
 		<Fragment>
 			<div style={wrapperStyle}>
-				<OnButton changeOnOff={setOnOff} onOff={onOff} />
-				<OffButton changeOnOff={setOnOff} onOff={onOff} />
+				<OnButton changeOnOff={setOnOff} onOff={onOff} onChange={onChange} />
+				<OffButton changeOnOff={setOnOff} onOff={onOff} onChange={onChange} />
 				<Lamp onOff={onOff} />
 			</div>
 		</Fragment>
@@ -25,10 +25,11 @@ export function UncontrolledButton({setOn}: UncontrolledButtonType) {
 
 type ButtonType = {
 	changeOnOff: (onOff: boolean) => void;
+	onChange: (onOff: boolean) => void
 	onOff: boolean;
 };
 
-function OnButton({ changeOnOff, onOff }: ButtonType) {
+function OnButton({ changeOnOff, onOff, onChange }: ButtonType) {
 	const onButtonStyle: CSS.Properties = {
 		width: '100px',
 		height: '50px',
@@ -36,14 +37,19 @@ function OnButton({ changeOnOff, onOff }: ButtonType) {
 		backgroundColor: onOff ? 'green' : 'white',
 	};
 
+	const onClicked = () => {
+		changeOnOff(true);
+		onChange(true);
+	};
+	
 	return (
-		<div style={onButtonStyle} onClick={() => changeOnOff(true)}>
+		<div style={onButtonStyle} onClick={onClicked}>
 			On
 		</div>
 	);
 }
 
-function OffButton({ changeOnOff, onOff }: ButtonType) {
+function OffButton({ changeOnOff, onOff, onChange }: ButtonType) {
 	const offButtonStyle: CSS.Properties = {
 		width: '100px',
 		height: '50px',
@@ -51,8 +57,13 @@ function OffButton({ changeOnOff, onOff }: ButtonType) {
 		backgroundColor: onOff ? 'white' : 'red',
 	};
 
+	const onClicked = () => {
+		changeOnOff(false);
+		onChange(false);
+	}
+	
 	return (
-		<div style={offButtonStyle} onClick={() => changeOnOff(false)}>
+		<div style={offButtonStyle} onClick={onClicked}>
 			Off
 		</div>
 	);
