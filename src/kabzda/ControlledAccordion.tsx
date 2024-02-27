@@ -25,7 +25,7 @@ type AccordionTitlePropsType = {
 };
 
 function AccordionTitle({ title, setCollapsed }: AccordionTitlePropsType) {
-	return <h3 onClick={() => setCollapsed()}>{title}</h3>;
+	return <h3 onClick={setCollapsed}>{title}</h3>;
 }
 
 function AccordionBody() {

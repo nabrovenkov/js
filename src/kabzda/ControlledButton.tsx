@@ -1,16 +1,17 @@
 import { Fragment, useState } from 'react';
 import CSS from 'csstype';
-type UncontrolledButtonType = {
-	setOn: (onOff: boolean) => void
+
+type ControlledButtonType = {
+	onOff: boolean
+	setOnOff: (onOff: boolean) => void
 }
-export function UncontrolledButton({setOn}: UncontrolledButtonType) {
+
+export function ControlledButton({onOff, setOnOff}: ControlledButtonType) {
 	const wrapperStyle: CSS.Properties = {
 		display: 'flex',
 		justifyContent: 'center',
 		gap: '5px',
 	};
-
-	const [onOff, setOnOff] = useState(false);
 
 	return (
 		<Fragment>
