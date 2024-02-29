@@ -8,7 +8,7 @@ import { FilterTest } from './micro_tasks/filter/FilterTest'
 import { Input } from './micro_tasks/input/Input'
 import { ReactLearn } from './react_learn/ReactLearn'
 import { KabzdaApp } from './kabzda/Kabzda'
-import { User } from './06_callback/Callback'
+import { User } from './native_js_ts/06_callback/Callback'
 
 function App() {
 	return (
