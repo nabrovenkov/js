@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { UncontrolledAccordion } from './UncontrolledAccordion';
-import { ControlledRating, RatingValueType } from './ControlledRating';
-import { UncontrolledRating } from './UncontrolledRating';
-import { ControlledAccordion } from './ControlledAccordion';
-import { UncontrolledButton } from './UncontrolledButton';
-import { ControlledButton } from './ControlledButton';
+import { UncontrolledAccordion } from './accordion/UncontrolledAccordion';
+import { ControlledRating, RatingValueType } from './rating/ControlledRating';
+import { UncontrolledRating } from './rating/UncontrolledRating';
+import { ControlledAccordion } from './accordion/ControlledAccordion';
+import { UncontrolledButton } from './button/UncontrolledButton';
+import { ControlledButton } from './button/ControlledButton';
 
 export function KabzdaApp() {
 	const [ratingValue, setRatingValue] = useState<RatingValueType>(0);
