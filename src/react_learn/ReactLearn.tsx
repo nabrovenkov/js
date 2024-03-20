@@ -22,7 +22,7 @@ export function ReactLearn() {
 			{/* <FormInputStuck/> */}
 			{/* <FeedbackForm /> */}
 			{/* <ButtonOnOff/> */}
-			<TrafficLight/>
+			{/* <TrafficLight/> */}
 		</Fragment>
 	)
 }
