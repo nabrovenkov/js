@@ -3,7 +3,6 @@ import { useState } from 'react';
 type RatingPropsType = {};
 
 export function UncontrolledRating() {
-	console.log('Rating rendering');
 
 	let [value, setValue] = useState(0);
 
@@ -24,7 +23,6 @@ type StarPropsType = {
 };
 
 function Star({ selected, setValue }: StarPropsType) {
-	console.log('Star rendering');
 
 	return (
 		<span onClick={() => setValue}>

@@ -15,14 +15,23 @@ export function KabzdaApp() {
 		<div>
 			<UncontrolledRating />
 			<UncontrolledAccordion titleValue='Menu' />
-			<UncontrolledButton onChange={setOnOff}/> {onOff.toString()}
+			<UncontrolledButton onChange={setOnOff} /> {onOff.toString()}
 			<ControlledRating value={ratingValue} setRatingValue={setRatingValue} />
-			<ControlledAccordion
+			{/* <ControlledAccordion
 				titleValue='Menu'
 				collapsed={collapsed}
-				setCollapsed={setCollapsed}
-			/>
-			<ControlledButton onOff={onOff} setOnOff={setOnOff}/>
+				setCollapsed={() => {
+					setCollapsed(!collapsed);
+				}}
+				items={[
+					{ title: 'Oleg', value: 1 },
+					{ title: 'Alex', value: 2 },
+					{ title: 'Vlad', value: 3 },
+					{ title: 'Sveta', value: 4 },
+				]}
+				onClick={}
+			/> */}
+			<ControlledButton onOff={onOff} setOnOff={setOnOff} />
 		</div>
 	);
 }
