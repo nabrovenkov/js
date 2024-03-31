@@ -6,9 +6,10 @@ import Poem from './rendering_list/Poem'
 import { Toolbar } from './responding_to_events/Button'
 import { GalleryState } from './state/GalleryState'
 import { FormInputStuck } from './state/FormInputStuck'
-import { FeedbackForm } from './state/FeedbackForm'
+
 import { ButtonOnOff } from './state/ButtonOnOff'
 import { TrafficLight } from './state_as_a_snapshot/TrafficLight'
+import FeedbackForm from './choosing_the_state_structure/FeedbackForm'
 
 export function ReactLearn() {
 	return (
@@ -23,6 +24,7 @@ export function ReactLearn() {
 			{/* <FeedbackForm /> */}
 			{/* <ButtonOnOff/> */}
 			{/* <TrafficLight/> */}
+			<FeedbackForm/>
 		</Fragment>
 	)
 }

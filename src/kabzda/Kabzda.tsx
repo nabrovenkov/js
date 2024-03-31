@@ -5,6 +5,7 @@ import { UncontrolledRating } from './rating/UncontrolledRating';
 import { ControlledAccordion } from './accordion/ControlledAccordion';
 import { UncontrolledButton } from './button/UncontrolledButton';
 import { ControlledButton } from './button/ControlledButton';
+import { Select } from './select/Select';
 
 export function KabzdaApp() {
 	const [ratingValue, setRatingValue] = useState<RatingValueType>(0);
@@ -32,6 +33,7 @@ export function KabzdaApp() {
 				onClick={}
 			/> */}
 			<ControlledButton onOff={onOff} setOnOff={setOnOff} />
+			<Select/>
 		</div>
 	);
 }
