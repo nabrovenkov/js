@@ -30,14 +30,26 @@ export const SelectId = (props: SelectPropsType) => {
 	};
 
 	const onKeyUp = (event: any) => {
-		for (let i = 0; i < props.items.length; i++) {
-			if (props.items[i].value === hoveredElementValue) {
-				if (props.items[i + 1]) {
-					props.onChange(props.items[i + 1].value);
-					setHoveredElementValue(props.value);
-					break;
+		if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+			for (let i = 0; i < props.items.length; i++) {
+				if (props.items[i].value === hoveredElementValue) {
+					const precedentElement =
+						event.key === 'ArrowDown' ? props.items[i + 1] : props.items[i - 1];
+					if (precedentElement) {
+						props.onChange(precedentElement.value);
+						return;
+					}
 				}
 			}
+			if (!selectedItem) {
+				props.onChange(props.items[0].value);
+			}
+		}
+		if (event.key === 'Escape') {
+			setActive(false);
+		}
+		if (event.key === 'Enter') {
+			setActive(!active);
 		}
 		// console.log(event);
 	};
