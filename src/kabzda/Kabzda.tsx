@@ -15,7 +15,7 @@ export function KabzdaApp() {
 	return (
 		<div>
 			<UncontrolledRating />
-			<UncontrolledAccordion titleValue='Menu' />
+			{/* <UncontrolledAccordion titleValue='Menu' onClick={}/> */}
 			<UncontrolledButton onChange={setOnOff} /> {onOff.toString()}
 			<ControlledRating value={ratingValue} setRatingValue={setRatingValue} />
 			{/* <ControlledAccordion
@@ -33,7 +33,7 @@ export function KabzdaApp() {
 				onClick={}
 			/> */}
 			<ControlledButton onOff={onOff} setOnOff={setOnOff} />
-			<Select/>
+			{/* <Select/> */}
 		</div>
 	);
 }
