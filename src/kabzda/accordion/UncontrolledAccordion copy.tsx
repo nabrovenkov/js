@@ -3,15 +3,7 @@ import { reducer } from './reducer';
 
 type AccordionPropsType = {
 	titleValue: string;
-};
-type ActionType = {
-	type: string;
-};
-const reducer = (state: boolean, action: ActionType) => {
-	if (action.type === 'TOGGLE-COLLAPSED') {
-		return !state;
-	}
-	return state;
+	onClick: () => void;
 };
 export function UncontrolledAccordion({
 	titleValue,
@@ -29,7 +21,7 @@ export function UncontrolledAccordion({
 					dispatch({ type: 'TOGGLE-COLLAPSED' });
 				}}
 			/>
-			{!collapsed && <AccordionBody />}
+			{!state.collapsed && <AccordionBody />}
 		</div>
 	);
 }
