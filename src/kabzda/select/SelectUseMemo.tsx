@@ -10,12 +10,11 @@ type SelectPropsType = {
 	onChange: (value: string) => void;
 	items: StateType[];
 };
-export const SelectId = (props: SelectPropsType) => {
+export const SelectUseMemo = (props: SelectPropsType) => {
 	const [active, setActive] = useState(false);
 	const [hoveredElementValue, setHoveredElementValue] = useState(props.value);
 	const selectedItem = props.items.find((i) => i.value === props.value);
 	const hoveredItem = props.items.find((i) => i.value === hoveredElementValue);
-	
 	useEffect(() => {
 		setHoveredElementValue(props.value);
 	}, [props.value]);

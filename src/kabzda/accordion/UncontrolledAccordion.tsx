@@ -3,11 +3,14 @@ import { useReducer, useState } from 'react';
 type AccordionPropsType = {
 	titleValue: string;
 };
-
+type ActionType = {
+	type: string;
+};
 const reducer = (state: boolean, action: ActionType) => {
-	if (action.Type === 'TOGGLE-COLLAPSED') {
-		return state;
+	if (action.type === 'TOGGLE-COLLAPSED') {
+		return !state;
 	}
+	return state;
 };
 export function UncontrolledAccordion({ titleValue }: AccordionPropsType) {
 	// const [collapsed, setCollapsed] = useState(true);
@@ -16,9 +19,12 @@ export function UncontrolledAccordion({ titleValue }: AccordionPropsType) {
 	return (
 		<div>
 			{/* <AccordionTitle title={titleValue} set={() => setCollapsed(!collapsed)} /> */}
-			<AccordionTitle title={titleValue} onClick={() => {
-				dispatch({type: 'TOGGLE-COLLAPSED'})
-			}}/>
+			<AccordionTitle
+				title={titleValue}
+				onClick={() => {
+					dispatch({ type: 'TOGGLE-COLLAPSED' });
+				}}
+			/>
 			{!collapsed && <AccordionBody />}
 		</div>
 	);

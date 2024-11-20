@@ -8,8 +8,8 @@ function App() {
 	return (
 		<div className='App'>
 			{/* <ReactLearn/> */}
-			<KabzdaApp />
-			{/* <NativeJsTs/> */}
+			{/* <KabzdaApp /> */}
+			<NativeJsTs/>
 		</div>
 	)
 }
