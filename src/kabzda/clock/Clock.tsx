@@ -9,6 +9,10 @@ const twoDigitNumber = (num: number) => {
 
 export const Clock = () => {
 	const [date, setDate] = useState(new Date());
+	axios
+		.get('https://google.com')
+		.then((res) => res.data)
+		.then((data) => console.log(data));
 
 	useEffect(() => {
 		const intervalId = setInterval(() => {
